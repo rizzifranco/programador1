@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUAL NUMERO ES MAYOR?</title>
+</head>
+<body>
+    <script>
+             var lista  = new Array;
+                 for(var i=0;i<5;i++){
+                 lista[i]=parseInt(prompt("Introduzca un numero"))
+                 }
+                 maximo = 0;
+
+                 for(var i=0,len=lista .length;i<len;i++){
+                      if(maximo < lista [i]){
+                       maximo = lista [i];}
+                     }
+
+            alert("el numero mayor es " +maximo);
+    </script>
+</body>
+</html>
