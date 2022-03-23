@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <scrip src="accion.js"></script>
+    <title>TEXTO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="colores.css">
+</head>
+<body>
+    <header id="titulo">
+        <h1 id="titulo">CONTADOR DE CARACTERES</h1>
+    </header>
+    <div class="caja">
+    <textarea placeholder="INGRESE TEXTO.." name="" id="texto" cols="30" rows="10"></textarea>
+    <div class="txt">N° de Caracteres :    <span id="contar"></span></div>
+
+    <script>
+        var texto = document.getElementById('texto');
+        var contar = document.getElementById('contar');
+        
+        texto.addEventListener('keyup', function(){
+            contar.innerText = texto.value.length;
+
+        })
+    </script>
+</div>
+</body>
+</html>

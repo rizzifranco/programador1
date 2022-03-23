@@ -1,0 +1,58 @@
+div {
+    display: block;
+    background: #ECF9ED;
+    position: absolute;
+    border-radius: 100px;
+}
+
+div div {
+    height: 100px;
+    width: 100px;
+    background-color: #214E63;
+}
+
+.contenedor {
+    width: 600px;
+    height: 200px;
+    position: relative;
+    border: 4px;
+    margin: 300px auto;
+}
+
+.caja1 { background-color: #C9CB62;
+    top: 50px;
+    right: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.caja2 { background-color: #C96B5E;
+    top: 50px;
+left: 250px;
+border-radius: 50%;
+cursor:pointer;
+transition: all 0.3s ease;
+}
+
+.caja3 { 
+    top: 50px;
+    left: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.caja1:hover{
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.9);
+}
+
+
+.caja2:hover{
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.9);
+}
+
+
+.caja3:hover{
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.9);
+}
