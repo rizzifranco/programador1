@@ -1,0 +1,30 @@
+li {
+    list-style: none;
+}
+
+.txt{
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.btn btn-outline-success{
+    color: black;
+}
+
+.container-fluid {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.accordion-item {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
