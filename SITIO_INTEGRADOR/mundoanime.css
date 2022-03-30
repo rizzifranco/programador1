@@ -1,0 +1,62 @@
+html {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item {
+    background-color: black;
+}
+
+.navbar-dark{
+    background-color: black;
+}
+
+.carousel-caption {
+    text-align: left;
+ 
+    padding-bottom: 50px;
+    padding-right: 250px;
+}
+
+.subtitulo {
+    background-color: black;
+    padding: 1rem;
+    color: white;
+}
+
+.d-flex {
+    border-width: 20px;
+}
+
+h1, h2 {
+    font-family:'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sub {
+    font-weight: 700;
+}
+
+
+.carousel-control-prev {
+    width: 10%;
+}
+
+.carousel-control-next {
+    width: 10%;
+}
+
+.btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 1rem 2rem;
+    color: #fff;
+    margin-right: 1.25rem;
+    cursor: pointer;
+    transition: .3s ease;
+
+}
