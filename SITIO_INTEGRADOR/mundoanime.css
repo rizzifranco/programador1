@@ -28,7 +28,7 @@ font-family: 'Montserrat', sans-serif;
     border-width: 20px;
 }
 
-h1, h2 {
+h1, h2, h5{
     font-family:'Montserrat', sans-serif;
 }
 
@@ -59,4 +59,22 @@ p {
     cursor: pointer;
     transition: .3s ease;
 
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+.card:hover { 
+    box-shadow: 0 0 1rem #fff;
+}
+.mov {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.card-img-top {
+    border-top-right-radius:  10px;
+    border-top-left-radius: 10px;
 }
