@@ -10,6 +10,7 @@ var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { UCS2_ICELANDIC_CI } = require('mysql/lib/protocol/constants/charsets');
 
 var app = express();
 
@@ -26,9 +27,46 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-pool.query('select * from empleados').then (function (resultados) {
-  console.log (resultados)
-});
+//consultar toda la tabla
+
+//pool.query('select * from empleados').then (function (resultados) {
+  //console.log (resultados)
+//});
+
+//agregar un empleado
+
+// var obj = {
+//   nombre: 'Juan',
+//   apellido: 'Lopez',
+//   trabajo: 'docente',
+//   edad:38,
+//   salario:15000,
+//   mail:'juanlopez@gmail.com'
+// }
+
+// pool.query('insert into empleados set ?', [obj]).then (function (resultados){
+//   console.log (resultados);
+// })
+
+// modificar un empleado
+
+// var id = 20;
+// var obj = {
+//   nombre: 'Juan',
+//   apellido: 'Gomez'
+// }
+
+//  pool.query('update empleados set ? where id_emp=?', [obj, id]).then (function (resultados){
+//    console.log (resultados);
+//  });
+
+ //borrar un empleado
+
+//  var id = 22;
+
+//   pool.query('delete from empleados where id_emp=?', [id]).then (function (resultados){
+//    console.log (resultados);
+//  });
 
 
 // catch 404 and forward to error handler

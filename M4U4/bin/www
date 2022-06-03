@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('m4u1:server');
+var debug = require('debug')('m3u3-mundo-anime:server');
 var http = require('http');
 
 /**
