@@ -1,7 +1,4 @@
 var express = require('express');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
-const async = require('hbs/lib/async');
 var router = express.Router();
 var usuariosModel = require('../../models/usuariosModel');
 
@@ -9,7 +6,7 @@ var usuariosModel = require('../../models/usuariosModel');
 router.get('/', function(req, res, next) {
   res.render('admin/novedades',{
       layout:'admin/layout',
-      usuario: req.session.nombre
+      nombre: req.session.nombre
   } );
 });
 
