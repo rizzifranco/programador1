@@ -10,7 +10,7 @@ async function getNovedades() {
 async function deleteNovedadesById(id) {
     var query = 'delete from novedades where id = ?';
     var row = await pool.query(query, [id]);
-    return rows;
+    return row;
 }
 
 module.exports = {getNovedades, deleteNovedadesById}

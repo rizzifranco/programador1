@@ -4,10 +4,16 @@ const res = require('express/lib/response');
 const async = require('hbs/lib/async');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var novedadesModel = require('../models/usuariosModel');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function(req, res, next) {
+
+  var novedades = await novedadesModel.getNovedades();
+
+  res.render('index', {
+    novedades
+  });
 });
 
 router.post( '/' , async(req, res, next) => {
