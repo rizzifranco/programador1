@@ -5,7 +5,7 @@ var novedadesModel = require('../../models/novedadesModel');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  var novedades = await novedadesModel.getNovedades();
+  var novedades = novedadesModel.getNovedades();
 
   res.render('admin/novedades',{
       layout:'admin/layout',

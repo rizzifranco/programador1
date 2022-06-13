@@ -19,16 +19,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="width: 300px">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="font-family: 'Montserrat', sans-serif;">Inicio</a>
+                <a class="nav-link active" aria-current="page" data- href="#Inicio" style="font-family: 'Montserrat', sans-serif;">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="font-family: 'Montserrat', sans-serif;">Series</a>
+                <a class="nav-link" href="#Series" style="font-family: 'Montserrat', sans-serif;">Series</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="font-family: 'Montserrat', sans-serif;">Noticias</a>
+                <a class="nav-link" href="#Noticias" style="font-family: 'Montserrat', sans-serif;">Noticias</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="color: orange ; font-family: 'Montserrat', sans-serif;">Premium</a>
+                <a class="nav-link" href="#Premium" style="color: orange ; font-family: 'Montserrat', sans-serif;">Premium</a>
               </li> 
              
             </ul>
@@ -144,46 +144,48 @@
     </div>
 
 <br>
-    <h2 class='text-center'>Noticias</h2>
+    <h2 class='text-center'>Ultimas novedades del anime</h2>
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
+      {{#each novedades}}
   <div class="col">
+
     <div class="card" style="background: rgba(66, 66, 66, 0.5)">
       <img src="..." class="card-img-top" alt="...">  
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}">
+        <h5 class="card-title">{{titulo}}</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </a>
       </div>
     </div>
+  
   </div>
-  <div class="col">
-    <div class="card"  style="background: rgba(66, 66, 66, 0.5)">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  {{/each}}
+
+</div>
+
+{{#each novedades}}
+
+<div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">{{titulo}}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card" style="background: rgba(66, 66, 66, 0.5)">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      <div class="modal-body">
+        <h6>{{subtitulo}}</h6>
+        <p>{{cuerpo}}</p>
       </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card" style="background: rgba(66, 66, 66, 0.5)">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
+
+{{/each}}
 
 <br>
 

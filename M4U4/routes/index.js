@@ -4,7 +4,7 @@ const res = require('express/lib/response');
 const async = require('hbs/lib/async');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-var novedadesModel = require('../models/usuariosModel');
+var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {

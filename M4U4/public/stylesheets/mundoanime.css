@@ -79,3 +79,6 @@ p {
     border-top-left-radius: 10px;
 }
 
+.modal-content{
+    background: black;
+}
