@@ -7,7 +7,7 @@
             </a>
           </div>
         
-        <div class="container-fluid">
+        <div class="nav justify-content-end" style="margin-right:50px;">
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             
@@ -17,7 +17,7 @@
           </button>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="width: 300px">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" data- href="#Inicio" style="font-family: 'Montserrat', sans-serif;">Inicio</a>
               </li>
@@ -32,14 +32,14 @@
               </li> 
              
             </ul>
-            
+{{!--             
             <form class="d-flex">
               <input class="form-control me-3" type="search" placeholder="Buscar.." aria-label="Search" style="font-family: 'Montserrat', sans-serif; width: 300px;">
               <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
               </svg></button>
               
-            </form>
+            </form> --}}
           </div>
         </div>
       </nav>
@@ -151,11 +151,10 @@
   <div class="col">
 
     <div class="card" style="background: rgba(66, 66, 66, 0.5)">
-      <img src="..." class="card-img-top" alt="...">  
+      <img src="{{imagen}}">  
       <div class="card-body">
         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}">
         <h5 class="card-title">{{titulo}}</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </a>
       </div>
     </div>
@@ -171,10 +170,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">{{titulo}}</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <img src="{{imagen}}" alt="">
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <h4 class="modal-title" id="exampleModalLabel">{{titulo}}</h4>
         <h6>{{subtitulo}}</h6>
         <p>{{cuerpo}}</p>
       </div>

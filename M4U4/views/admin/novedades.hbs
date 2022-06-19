@@ -11,12 +11,19 @@
         {{!--fin fila 1--}}
         {{!--fila 2--}}
 <div class="row">
-    <div class="col-7" style="margin-top:-9px;">
+    <div class="col-6" style="margin-top:-9px;">
         <h2>Listado de novedades</h2>
     </div>
-    <div class="col-5 text-end">
+    <div class="col-2 text-end">
         <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i> Nuevo
         </a>
+    </div>
+    <div class="col-4 text-right">
+      <form class="d-flex" action="/admin/novedades" method="get">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q">
+        <button class="btn btn-secondary" type="submit"  style="margin:0 8px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+        </form>
     </div>
 </div>
 
@@ -27,7 +34,8 @@
             <thead>
                 <tr class="table-dark">
                     <th scope="col">#</th>
-                    <th scope="col">titulo</th>
+                    <th scope="col">Titulo</th>
+                     <th scope="col">Imagen</th>
                     <th scope="col" class="text-end">Acciones</th>
                 </tr>
             </thead>
@@ -36,9 +44,10 @@
                 <tr>
                     <th scope="row">{{id}}</th>
                     <td>{{titulo}}</td>
+                    <td>{{{imagen}}}</td>
                     <td class="text-end">
-                        <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+                        <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary" style="margin: 3px 0 3px;"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary" style="margin: 3px 0 3px;"><i class="fas fa-trash"></i></a>
                     </td>
                     {{/each}}
                 </tr>
