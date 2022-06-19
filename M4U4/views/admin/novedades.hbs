@@ -20,7 +20,7 @@
     </div>
     <div class="col-4 text-right">
       <form class="d-flex" action="/admin/novedades" method="get">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
         <button class="btn btn-secondary" type="submit"  style="margin:0 8px;"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
         </form>
@@ -53,6 +53,11 @@
                 </tr>
             </tbody>
         </table>
+        {{#if is_search}}
+        {{#unless novedades.length}}
+        No se encontraron resultados para "<b>{{q}}</b>"
+        {{/unless}}
+        {{/if}}
     </div>
 </div>
 </div>
