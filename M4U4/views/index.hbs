@@ -22,24 +22,17 @@
                 <a class="nav-link active" aria-current="page" data- href="#Inicio" style="font-family: 'Montserrat', sans-serif;">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Series" style="font-family: 'Montserrat', sans-serif;">Series</a>
+                <a class="nav-link" data-scroll href="#series" style="font-family: 'Montserrat', sans-serif;">Series</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Noticias" style="font-family: 'Montserrat', sans-serif;">Noticias</a>
+                <a class="nav-link" data-scroll href="#noticias" style="font-family: 'Montserrat', sans-serif;">Noticias</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Premium" style="color: orange ; font-family: 'Montserrat', sans-serif;">Premium</a>
+                <a class="nav-link" data-scroll href="#premium" style="color: orange ; font-family: 'Montserrat', sans-serif;">Premium</a>
               </li> 
              
             </ul>
-{{!--             
-            <form class="d-flex">
-              <input class="form-control me-3" type="search" placeholder="Buscar.." aria-label="Search" style="font-family: 'Montserrat', sans-serif; width: 300px;">
-              <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-              </svg></button>
-              
-            </form> --}}
+
           </div>
         </div>
       </nav>
@@ -86,7 +79,7 @@
         </button>
       </div>
       
-<div class="subtitulo">
+<div class="subtitulo" id="series">
   
     <h2>Series Destacadas</h2>
 
@@ -144,14 +137,14 @@
     </div>
 
 <br>
-    <h2 class='text-center'>Ultimas novedades del anime</h2>
+    <h2 class='text-center' id="noticias">Ultimas novedades del anime</h2>
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
       {{#each novedades}}
   <div class="col">
 
     <div class="card" style="background: rgba(66, 66, 66, 0.5)">
-      <img src="{{imagen}}">  
+      <img src="{{imagen}}" class="card-img-top">  
       <div class="card-body">
         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}">
         <h5 class="card-title">{{titulo}}</h5>
@@ -170,11 +163,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-         <img src="{{imagen}}" alt="">
+          <h4 class="modal-title" id="exampleModalLabel">{{titulo}}</h4>
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h4 class="modal-title" id="exampleModalLabel">{{titulo}}</h4>
+       
         <h6>{{subtitulo}}</h6>
         <p>{{cuerpo}}</p>
       </div>
@@ -190,7 +183,7 @@
 <br>
 
 <div>
-<h5 style="text-align: center;">¿Quieres ser <b>Premium</b> ya? Ingresa tu email para crear una cuenta y activar tu membresía en <b>Mundo Anime</b>.</h5>
+<h5 style="text-align: center;" id="premium">¿Quieres ser <b>Premium</b> ya? Ingresa tu email para crear una cuenta y activar tu membresía en <b>Mundo Anime</b>.</h5>
 </div>
 <br>
 
@@ -229,29 +222,12 @@
 </div>
 
 <br>
-<br>
-<!--
-    <form action="/" method="post">
-      <div class="mov">
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" style="font-family: 'Montserrat', sans-serif;"><b>Correo Electronico</b></label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre@ejemplo.com" style="font-family: 'Montserrat', sans-serif;" name="correo">
-        
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label" style="font-family: 'Montserrat', sans-serif;"><b>Contraseña</b></label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Un minimo de 8 caracteres." style="font-family: 'Montserrat', sans-serif;" name="contraseña">
-        <div id="emailHelp" class="form-text" style="font-family: 'Montserrat', sans-serif;">Nunca compartas tu contraseña.</div>
-      </div>
-      
-      <button type="submit" class="btn btn-warning" style="font-family: 'Montserrat', sans-serif;">Activar</button>
-      
-        <span id="passwordHelpInline" class="form-text" style="font-family: 'Montserrat', sans-serif;">
-          Se te pedira la validacion al correo electronico y continuaras con la membresia.
-        </span>
-    </form>
-    -->
+
   </div>
   
     
   </div>
+
+  <footer>
+    <p class="text">Diseñado por Franco Rizzi</p>
+  </footer>

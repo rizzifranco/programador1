@@ -1,7 +1,7 @@
-<div class="container" style="margin:100px 0">
+<div class="container" style="margin:30px 0">
     <div class="row">
-        <div class="col-6 offset-3">
-            <h4>Modicar la novedad</h4>
+        <div class="col-7 offset-4">
+            <h3>Modicar la novedad</h3>
             <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
             <input type="hidden" value="{{novedad.id}}" name="id">
             <div class="form-group">
@@ -17,14 +17,17 @@
                 <label for="">Titulo</label>
                 <input type="text" class="form-control" name="titulo" value="{{novedad.titulo}}">
             </div>
+            <br>
             <div class="form-group">
                 <label for="">Subtitulo</label>
                 <input type="text" class="form-control" name="subtitulo" value="{{novedad.subtitulo}}">
             </div>
+            <br>
             <div class="form-group">
                 <label for="">Cuerpo</label>
                 <textarea class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea>
             </div>
+            <br>
             <button type="submit" class="btn btn-primary">Modificar</button>
             </form>
             {{#if error}}
